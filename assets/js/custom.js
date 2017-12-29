@@ -206,7 +206,7 @@ jQuery(document).ready(function() {
         $.ajax({
             url: form.attr('action'),
             method: form.attr('method'),
-            data: form.serialize(),
+            data: JSON.stringify(form.serializeJSON()),
             success: function(result){
                 if (result == 'success'){
                     $('.send-success').fadeIn().delay(4000).fadeOut();;  
